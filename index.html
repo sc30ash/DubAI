@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DubAI - Audiovisual Translation</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>DubAI <span>by Ashmit Bhardwaj</span></h1>
+        <p>Revolutionizing audiovisual translation with AI-powered lip-syncing</p>
+    </header>
+
+    <main class="dashboard">
+        <!-- Upload Section -->
+        <div class="card">
+            <h2><i class="fas fa-upload"></i> Upload Video</h2>
+            <div class="upload-area" id="uploadArea">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <p>Drag & drop your video here</p>
+                <p>or</p>
+                <button id="browseBtn">Browse Files</button>
+                <input type="file" id="fileInput" accept="video/*" hidden>
+                <div class="progress" id="progressBar">
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
+            <div class="requirements">
+                <p><i class="fas fa-info-circle"></i> Requirements:</p>
+                <ul>
+                    <li>Face clearly visible throughout</li>
+                    <li>Maximum duration: 5 minutes</li>
+                    <li>Supported formats: MP4, MOV</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Output Section -->
+        <div class="card">
+            <h2><i class="fas fa-download"></i> Your Result</h2>
+            <div class="output-container" id="outputContainer">
+                <div class="placeholder" id="outputPlaceholder">
+                    <i class="fas fa-video"></i>
+                    <p>Your processed video will appear here</p>
+                </div>
+                <video id="outputVideo" controls style="display: none;"></video>
+                <div class="processing" id="processingIndicator">
+                    <div class="spinner"></div>
+                    <p>Processing your video...</p>
+                </div>
+                <button id="downloadBtn" class="download-btn" style="display: none;">
+                    <i class="fas fa-download"></i> Download Result
+                </button>
+            </div>
+        </div>
+
+        <!-- Sample Input -->
+        <div class="card">
+            <h2><i class="fas fa-film"></i> Sample Input</h2>
+            <div class="video-container">
+                <video controls>
+                    <source src="static/sample_input.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-info">
+                    <p><i class="fas fa-language"></i> Hindi audio</p>
+                    <p><i class="fas fa-clock"></i> 30 seconds</p>
+                </div>
+            </div>
+            <h2><i class="fas fa-star"></i> Sample Output</h2>
+            <div class="video-container">
+                <video controls>
+                    <source src="static/sample_output.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-info">
+                    <p><i class="fas fa-language"></i> English audio with lip-sync</p>
+                    <p><i class="fas fa-magic"></i> AI-processed</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Intellectual Property of Ashmit Bhardwaj</p>
+        <p>
+            <a href="https://github.com/yourusername/dubai-project" target="_blank">
+                <i class="fab fa-github"></i> View on GitHub
+            </a>
+        </p>
+    </footer>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
